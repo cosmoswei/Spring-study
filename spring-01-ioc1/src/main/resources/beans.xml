@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="msqlImpl" class="com.wei.dao.UerDaoMySQLImpl"/>
+    <bean id ="orcleImpl" class="com.wei.dao.UserOrcle"/>
+    <bean id ="defaultImpl" class="com.wei.dao.UserDaoImpl"/>
+
+    <bean id="UserServiceImpl" class="com.wei.service.UserServiceImpl">
+        <property name="userDao" ref="msqlImpl"/>
+    </bean>
+</beans>

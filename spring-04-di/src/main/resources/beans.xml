@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.wei.pojo.Address">
+        <property name="address" value="株洲"></property>
+    </bean>
+
+    <bean id="student" class="com.wei.pojo.Student">
+        <property name="name" value="黄旭伟"/>
+
+        <property name="address" ref="address"/>
+
+        <property name="books">
+            <array>
+                <value>《数据结构》</value>
+                <value>《算法设计》</value>
+                <value>《网络编程》</value>
+                <value>《四级词汇》</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>看电影</value>
+                <value>网游戏</value>
+            </list>
+        </property>
+
+        <property name="card">
+            <map>
+                <entry key="身份证" value="41108119991111111111"></entry>
+                <entry key="银行卡" value="11231231231231231231"></entry>
+            </map>
+        </property>
+
+        <property name="game">
+            <set>
+                <value>和平精英</value>
+                <value>王者荣耀</value>
+                <value>哈哈哈哈</value>
+            </set>
+        </property>
+
+        <property name="wife">
+            <null></null>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="driver">sadsad12dasdfawrda</prop>
+                <prop key="url">dsadcxasdf2</prop>
+                <prop key="name">cosmoswei</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

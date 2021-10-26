@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--无参构造-->
+<!--    <bean id="user" class="com.wei.pojo.User">-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--        <property name="name" value="黄旭伟"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; more bean definitions go here &ndash;&gt;-->
+
+<!--1,下标赋值方式创建-->
+<!--    <bean id="user" class="com.wei.pojo.User">-->
+<!--        <constructor-arg index="0" value="宇宙伟"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--2,通过类型创建（不建议使用）-->
+<!--    <bean id="user" class="com.wei.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="hangxuwei"></constructor-arg>-->
+<!--    </bean>-->
+<!--3,直接使用参数名创建-->
+    <bean id="user" class="com.wei.pojo.User">
+        <constructor-arg name="name" value="宇宙伟 参数名"/>
+    </bean>
+    <bean id="userT" class="com.wei.pojo.UserT"/>
+</beans>
